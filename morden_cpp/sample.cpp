@@ -84,10 +84,22 @@ void atomic_sample()
 
 } 
 
+struct data {
+    int data;
+    char c;
+};
+
+union u_data {
+    int data;
+    char c;
+};
+
 int main()
 {
    // Data da = {1,2,3,4};
    // da.print();
-    atomic_sample();
+   // atomic_sample();
   //  print_tuple();
+    std::cout<<"data size = "<<sizeof(data);
+    std::cout<<"union data size = "<<sizeof(u_data);
 }
